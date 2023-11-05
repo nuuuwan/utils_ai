@@ -24,7 +24,7 @@ class AIText:
     def append_message(self, role: ChatRole, content: str):
         self.messages.append(Message(role=role, content=content).todict())
 
-    def send_message(self, message: str) -> str:
+    def ask(self, message: str) -> str:
         tic = time.perf_counter()
         self.append_message(ChatRole.user, message)
         response = openai.ChatCompletion.create(
@@ -36,5 +36,5 @@ class AIText:
 
         self.append_message(ChatRole.assistant, reply)
         toc = time.perf_counter()
-        log.debug(f'send_message -> {toc - tic:0.4f}s')
+        log.debug(f'ask -> {toc - tic:0.4f}s')
         return reply

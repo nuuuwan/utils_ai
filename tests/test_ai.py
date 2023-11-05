@@ -17,13 +17,12 @@ class TestAI(unittest.TestCase):
             "How do you get from the capital to Galle?",
         ]:
             print(Console.normal("User: " + message))
-            reply = ai.send_message(message)
+            reply = ai.ask(message)
             print(Console.note("AI: " + reply))
 
     @unittest.skip("needs API")
     def test_draw(self):
         ai = AI()
-        print('')
         for description in [
             'Painting of a romantic dinner with jazz',
             'Pop art of a beautiful scene from Sri Lanka',
