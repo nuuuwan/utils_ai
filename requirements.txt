@@ -1,0 +1,4 @@
+# Autogenerate by build_requirements
+utils_base-nuuuwan
+utils_www-nuuuwan
+openai
