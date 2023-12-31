@@ -33,6 +33,20 @@ class TestAI(unittest.TestCase):
             )
             ai.draw(description, image_file)
 
+    @unittest.skip("needs API")
+    def test_run(self):
+        ai = AI()
+        description = '''
+            Generate a folder named lk_flowers.
+            This folder represents a python repository, for data about
+            flowers of Sri Lanka.
+            Create an appropriate README.md file.
+            Create a LICENSE file.
+            Create three sub-folders: src, tests, and workflows.
+        '''
+        python_code_path = os.path.join('tests', '_output', 'test_run.py')
+        ai.run(description, python_code_path)
+
 
 if __name__ == '__main__':
     unittest.main()
