@@ -1,19 +1,26 @@
+import os
 import tempfile
 
-from utils_base import Log
+from utils_base import Log, Hash
 from utils_www import WWW
 
 log = Log('GenericAIImage')
 
 
 class GenericAIImage:
+    DIR_DESKTOP = os.environ['DIR_DESKTOP'] 
     def get_image_url(self, prompt: str) -> str:
         raise NotImplementedError
 
     def draw(self, prompt: str):
+        h = Hash.md5(prompt)[:8]
+        image_path = os.path.join(GenericAIImage.DIR_DESKTOP, f'{h}.png')
+        if os.path.exists(image_path):
+            log.warn(f'Image already exists.')
+            return image_path
+            
         try:
             image_url = self.get_image_url(prompt)
-            image_path = tempfile.mktemp('.png')
             WWW.download_binary(image_url, image_path)
             return image_path
         except Exception as e:
