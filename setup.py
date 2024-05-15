@@ -3,13 +3,13 @@
 import setuptools
 
 DIST_NAME = 'utils_ai'
-VERSION = "1.0.1"
+VERSION = "1.0.2"
 DESCRIPTION = "Utilities with AI support"
 INSTALL_REQUIRES = [
     'utils_base-nuuuwan',
     'utils_www-nuuuwan',
     'openai',
-    'mistral',
+    'mistralai',
 ]
 setuptools.setup(
     name="%s-nuuuwan" % DIST_NAME,
