@@ -2,11 +2,15 @@
 
 ## Recent Version History
 
-### 1.0.1
+### 1.0.2 (NEXT)
+
+* Added profiles
+
+### 1.0.1 (CURRENT)
 
 * Make utils-ai provider agnostic. Support both OpenAI and Mistral.
 
 ### 1.0.0
 
 * ChatGPT Chat
-* DALLE Image Generation
+* DALL.E Image Generation
