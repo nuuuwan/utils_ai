@@ -2,7 +2,11 @@
 
 ## Recent Version History
 
-### 1.0.3 (NEXT)
+### 1.0.4 (NEXT)
+
+### 1.0.3 (CURRENT)
+
+* Fixed DIR_DESKTOP bug
 
 ### 1.0.2 (CURRENT)
 
