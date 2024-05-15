@@ -3,7 +3,7 @@
 import setuptools
 
 DIST_NAME = 'utils_ai'
-VERSION = "1.0.3"
+VERSION = "1.0.5"
 DESCRIPTION = "Utilities with AI support"
 INSTALL_REQUIRES = [
     'utils_base-nuuuwan',
