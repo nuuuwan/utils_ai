@@ -21,6 +21,10 @@ class ChatApp:
     def run_iter(ai):
         message = input('>> ')
         print('')
+
+        if len(message) == 0:
+            return
+
         if message in ['quit', 'exit', 'q', 'x', 'exit()', 'quit()']:
             print(Console.note('Bye!'))
             print()
