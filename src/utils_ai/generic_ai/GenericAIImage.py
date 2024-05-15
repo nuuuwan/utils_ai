@@ -8,13 +8,14 @@ log = Log('GenericAIImage')
 
 
 class GenericAIImage:
-    DIR_DESKTOP = os.environ.get('DIR_DESKTOP') 
+    
     def get_image_url(self, prompt: str) -> str:
         raise NotImplementedError
 
     def draw(self, prompt: str):
+        dir_desktop = os.environ.get('DIR_DESKTOP') or tempfile.gettempdir()
         h = Hash.md5(prompt)[:8]
-        image_path = os.path.join(GenericAIImage.DIR_DESKTOP, f'{h}.png')
+        image_path = os.path.join(dir_desktop, f'dalle-{h}.png')
         if os.path.exists(image_path):
             log.warn(f'Image already exists.')
             return image_path
