@@ -8,7 +8,7 @@ log = Log('GenericAIImage')
 
 
 class GenericAIImage:
-    DIR_DESKTOP = os.environ['DIR_DESKTOP'] 
+    DIR_DESKTOP = os.environ.get('DIR_DESKTOP') 
     def get_image_url(self, prompt: str) -> str:
         raise NotImplementedError
 
