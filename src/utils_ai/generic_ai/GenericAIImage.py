@@ -1,9 +1,10 @@
 import tempfile
 
-from utils_www import WWW
 from utils_base import Log
+from utils_www import WWW
 
 log = Log('GenericAIImage')
+
 
 class GenericAIImage:
     def get_image_url(self, prompt: str) -> str:

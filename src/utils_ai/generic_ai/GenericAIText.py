@@ -10,6 +10,11 @@ class GenericAIText:
     def __init__(self):
         self.messages = []
 
+    def set_profile(self, profile_content: str):
+        self.messages.append(
+            Message(role=ChatRole.system, content=profile_content).todict()
+        )
+
     def append_message(self, role: ChatRole, content: str):
         self.messages.append(Message(role=role, content=content).todict())
 
