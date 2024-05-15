@@ -16,7 +16,7 @@ class GenericAIImage:
         h = Hash.md5(prompt)[:8]
         image_path = os.path.join(dir_desktop, f'dalle-{h}.png')
         if os.path.exists(image_path):
-            log.warn(f'Image already exists.')
+            log.warn('Image already exists.')
             return image_path
 
         try:
