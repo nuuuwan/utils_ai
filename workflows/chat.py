@@ -21,14 +21,16 @@ def main(provider_name: str):
 
         if message.lower().startswith('draw:'):
             image_path = ai.draw(message)
-            print(Console.note(image_path))
-            print('')
-            os.startfile(image_path)
+            if image_path:
+                print(Console.note(image_path))
+                print('')
+                os.startfile(image_path)
             continue
 
         reply = ai.chat(message)
-        print(Console.note(reply))
-        print('')
+        if reply:
+            print(Console.note(reply))
+            print('')
 
 
 if __name__ == '__main__':

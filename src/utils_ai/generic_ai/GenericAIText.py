@@ -3,7 +3,7 @@ from utils_base import Log
 from utils_ai.core.ChatRole import ChatRole
 from utils_ai.core.Message import Message
 
-log = Log('AIChat')
+log = Log('GenericAIText')
 
 
 class GenericAIText:
@@ -18,6 +18,10 @@ class GenericAIText:
 
     def chat(self, message: str) -> str:
         self.append_message(ChatRole.user, message)
-        reply = self.get_chat_reply(self.messages)
-        self.append_message(ChatRole.assistant, reply)
-        return reply
+        try:
+            reply = self.get_chat_reply(self.messages)
+            self.append_message(ChatRole.assistant, reply)
+            return reply
+        except Exception as e:
+            log.error(str(e))
+            return None
