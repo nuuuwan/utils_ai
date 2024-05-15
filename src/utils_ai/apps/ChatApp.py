@@ -27,7 +27,7 @@ class ChatApp:
             sys.exit(0)
 
         if message.lower().startswith('draw:'):
-            image_path = ai.draw(message)
+            image_path = ai.draw(prompt=message[5:])
             if image_path:
                 print(Console.note(image_path))
                 print('')
