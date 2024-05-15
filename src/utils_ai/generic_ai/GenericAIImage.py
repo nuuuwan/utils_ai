@@ -1,14 +1,13 @@
 import os
 import tempfile
 
-from utils_base import Log, Hash
+from utils_base import Hash, Log
 from utils_www import WWW
 
 log = Log('GenericAIImage')
 
 
 class GenericAIImage:
-    
     def get_image_url(self, prompt: str) -> str:
         raise NotImplementedError
 
@@ -19,7 +18,7 @@ class GenericAIImage:
         if os.path.exists(image_path):
             log.warn(f'Image already exists.')
             return image_path
-            
+
         try:
             image_url = self.get_image_url(prompt)
             WWW.download_binary(image_url, image_path)

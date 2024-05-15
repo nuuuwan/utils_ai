@@ -1,6 +1,6 @@
 import os
 
-from openai import OpenAI
+import openai
 
 from utils_ai.generic_ai import GenericAI
 
@@ -13,7 +13,7 @@ class OpenAIProvider(GenericAI):
     def __init__(self):
         GenericAI.__init__(self)
 
-        self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        self.client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 
     def get_chat_reply(self, messages: list) -> str:
         response = self.client.chat.completions.create(

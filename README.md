@@ -2,13 +2,11 @@
 
 ## Recent Version History
 
-### 1.0.4 (NEXT)
+### 1.0.5
 
-### 1.0.3 (CURRENT)
+* Various Bugs
 
-* Fixed DIR_DESKTOP bug
-
-### 1.0.2 (CURRENT)
+### 1.0.2
 
 * Added profiles
 * Fixed missing mistralai BUG
