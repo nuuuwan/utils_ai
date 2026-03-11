@@ -2,14 +2,13 @@
 
 import setuptools
 
-DIST_NAME = 'utils_ai'
+DIST_NAME = "utils_ai"
 VERSION = "1.0.5"
 DESCRIPTION = "Utilities with AI support"
 INSTALL_REQUIRES = [
-    'utils_base-nuuuwan',
-    'utils_www-nuuuwan',
-    'openai',
-    'mistralai',
+    "utils_base-nuuuwan",
+    "utils_www-nuuuwan",
+    "openai",
 ]
 setuptools.setup(
     name="%s-nuuuwan" % DIST_NAME,
@@ -32,6 +31,6 @@ setuptools.setup(
     packages=setuptools.find_packages(where="src"),
     python_requires=">=3.10",
     install_requires=INSTALL_REQUIRES,
-    test_suite='nose.collector',
-    tests_require=['nose'],
+    test_suite="nose.collector",
+    tests_require=["nose"],
 )

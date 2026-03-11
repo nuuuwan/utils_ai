@@ -4,5 +4,4 @@
 from utils_ai.apps import ChatApp
 from utils_ai.core import ChatRole, Message
 from utils_ai.generic_ai import GenericAI, GenericAIImage, GenericAIText
-from utils_ai.providers import (MistralAIProvider, OpenAIProvider,
-                                ProviderFactory)
+from utils_ai.providers import OpenAIProvider, ProviderFactory
