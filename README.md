@@ -2,6 +2,10 @@
 
 ## Recent Version History
 
+### 1.0.6
+
+* Deprecated Mistral
+
 ### 1.0.5
 
 * Various Bugs
