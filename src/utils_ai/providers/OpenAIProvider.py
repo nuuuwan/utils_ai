@@ -1,4 +1,5 @@
 import os
+
 from openai import OpenAI
 
 from utils_ai.generic_ai import GenericAI
